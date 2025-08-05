@@ -40,12 +40,17 @@ Confirmation when MA20 > MA50
 The following models were tested using GridSearchCV for hyperparameter tuning:
 
 Model	Notes
-Naive Bayes	Required only positive features
-XGBoost	use_label_encoder=False
-Logistic Regression	max_iter=1000
-Gradient Boosting	Basic sklearn implementation
-Decision Tree	Default params
-Random Forest	Default params
+Naive Bayes :	Required only positive features
+
+XGBoost :	use_label_encoder=False
+
+Logistic Regression :	max_iter=1000
+
+Gradient Boosting :	Basic sklearn implementation
+
+Decision Tree :	Default params
+
+Random Forest :	Default params
 
 🔍 Best model is automatically selected based on validation accuracy.
 
