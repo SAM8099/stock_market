@@ -54,5 +54,4 @@ Achieved accuracy: ~54%
 
 ⚠️ This is typical for short-term stock prediction models due to market noise.
 
-
-
+Link to streamlit app = https://stockmarket-nl7nvqvfsxgsu9hlybvbhm.streamlit.app/
