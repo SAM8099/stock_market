@@ -4,6 +4,7 @@ from src.components.data_transformation import DataTransformation
 from src.components.model_trainer import ModelTrainer
 from src.pipelines.predict_pipeline import PredictPipeline, CustomData
 from src.pipelines.train_pipeline import train
+
 from src.exception import CustomException
 import yfinance as yf
 import pandas as pd
@@ -56,9 +57,13 @@ def get_today_stock_features(stock_symbol: str):
     except Exception as e:
             raise CustomException(e, sys)
             raise CustomException(e, sys)
-model = PredictPipeline(stock_symbol=stock_symbol)
-if st.sidebar.button("Predict"):
+if st.button("Predict"):
     try:
+        stock_folder = stock_symbol.replace('.', '_')
+        model_path = os.path.join("artifacts", stock_folder, "model.pkl")
+        if not os.path.exists(model_path):
+            train(stock_symbol)
+        model = PredictPipeline(stock_symbol=stock_symbol)
         data = get_today_stock_features(stock_symbol)
         if data.empty:
             st.error("No data available for today's date. Please try again later.")
