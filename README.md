@@ -39,7 +39,8 @@ Confirmation when MA20 > MA50
 🧠 Machine Learning Models
 The following models were tested using GridSearchCV for hyperparameter tuning:
 
-Model	Notes
+Model	Notes:
+
 Naive Bayes :	Required only positive features
 
 XGBoost :	use_label_encoder=False
