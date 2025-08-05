@@ -56,7 +56,7 @@ def get_today_stock_features(stock_symbol: str):
 
     except Exception as e:
             raise CustomException(e, sys)
-            raise CustomException(e, sys)
+        
 if st.button("Predict"):
     try:
         stock_folder = stock_symbol.replace('.', '_')
