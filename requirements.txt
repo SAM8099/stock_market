@@ -1,0 +1,13 @@
+yfinance
+numpy 
+pandas
+streamlit
+matplotlib
+scikit-learn
+seaborn
+ipykernel
+ta
+oauth2client
+xgboost
+gspread
+dill
