@@ -1,16 +1,58 @@
-##Mini Algo-Trading App
-This app fetches historical stock data, applies an RSI + MA strategy, logs trades, and uses a simple ML model to predict stock movement.
+📈 Mini Algo-Trading App
+This Streamlit-based application automates the process of stock data analysis using a combination of technical indicators and machine learning.
 
-#Nifty stock used : 
-HDFCBANK, RELIANCE, INFY
+🧠 What It Does
+✅ Fetches historical stock data using Yahoo Finance API
 
-#Model : 
-Used GridSearchCV to obtain best model among Naive Bayes, XgBoost, Logistic Regression, Gradient Boosting, Decision tree and Random forests
+📊 Applies technical indicators like RSI, MA(20), and MA(50)
 
-#Strategy logic : 
-Used Yahoo finance api for dataset. Obtain RSI and moving average for 20 and 50 respectively.
+🧪 Trains and evaluates ML models using GridSearchCV
 
-#Accuracy
-Achieved a accuracy of 54% which is the average for current stock prediction models.
- 
+💹 Implements a basic RSI + MA crossover strategy
+
+📈 Predicts stock movement using best-performing model
+
+🗂️ Logs trades and analytics to Google Sheets
+
+📌 Stock Universe
+Focused on top Nifty stocks:
+
+HDFCBANK
+
+RELIANCE
+
+INFY
+
+🧮 Technical Indicators Used
+RSI (Relative Strength Index)
+
+Buy signal: RSI < 30
+
+Moving Averages
+
+20-day MA
+
+50-day MA
+
+Confirmation when MA20 > MA50
+
+🧠 Machine Learning Models
+The following models were tested using GridSearchCV for hyperparameter tuning:
+
+Model	Notes
+Naive Bayes	Required only positive features
+XGBoost	use_label_encoder=False
+Logistic Regression	max_iter=1000
+Gradient Boosting	Basic sklearn implementation
+Decision Tree	Default params
+Random Forest	Default params
+
+🔍 Best model is automatically selected based on validation accuracy.
+
+📊 Performance
+Achieved accuracy: ~54%
+
+⚠️ This is typical for short-term stock prediction models due to market noise.
+
+
 
